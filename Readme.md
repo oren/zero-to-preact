@@ -1,8 +1,10 @@
 # zero-to-preact
 
-1. install deps
-1. declare config
-1. write app code
+1. Install dependencies
+1. Declare config
+1. Write app code
+
+## 1. Install dependencies
 
 Create .gitignore
 ```
@@ -24,6 +26,8 @@ Add to package.json (inside scripts)
 "build": "webpack",
 "start": "webpack-dev-server --progress --hot --inline"
 ```
+
+## 2. Declare config
 
 Create webpack.config.js
 ```
@@ -71,6 +75,8 @@ module.exports = {
 	}
 };
 ```
+
+## 3. Write app code
 
 Create src folder
 
@@ -137,6 +143,8 @@ export default () => (
 );
 ```
 
+## Extra step (nice to have)
+
 Let's go crazy and add Hot Module Replacement!
 All we have to do is move our import of `App` and the `render()` call into a function, so that we can re-import changes as they get sent to the browser and re-render the new tree of components. We'll call that function so that we get an initial render like we had before, but then also pass it to Webpack to be called when we get updated components.
 
@@ -180,13 +188,17 @@ init();
 if (module.hot) module.hot.accept('./components/app', init);
 ```
 
-Run
+## Run in development
 ```
 npm run start
+```
+
+## Build for production
+```
 npm run build
 ```
 
 ## Notes:
 
-with webpack-dev-server, everything runs from memory
+* With webpack-dev-server, everything runs from memory
 
