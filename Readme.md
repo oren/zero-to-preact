@@ -17,7 +17,7 @@ Create .gitignore
 Run (it installs Webpack development dependencies)
 ```
 npm init -y
-npm install --save-dev webpack webpack-dev-server babel-core babel-loader babel-preset-es2015 babel-plugin-transform-react-jsx preact
+npm install --save-dev webpack webpack-dev-server babel-core babel-loader babel-preset-es2015 babel-plugin-transform-react-jsx preact copy-webpack-plugin
 ```
 
 Add to package.json (inside scripts)
