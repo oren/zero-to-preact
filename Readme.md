@@ -30,7 +30,7 @@ Add to package.json (inside scripts)
 ## 2. Declare config
 
 Create webpack.config.js
-```
+```js
 var path = require('path');
 
 module.exports = {
@@ -83,7 +83,7 @@ Create src folder
 Add a static `index.html` that the browser will hit when we request `http://localhost:8081`. It just contains a `<script>` tag pointing to the `bundle.js` file Webpack outputs.
 
 Create src/index.html
-```
+```js
 <!DOCTYPE html>
 <html>
 	<head>
@@ -98,7 +98,7 @@ Create src/index.html
 Add our entry point - `src/index.js`. This is where webpack starts bundling, and what gets invoked in the browser when we're ready to go. For now it's just going to import Preact and an `App` component we haven't written, and render it into `<body>`.
 
 Create src/index.js
-```
+```js
 // This is the entry file, which kicks off all rendering.
 //
 // We import h() here because that's the function our JSX elements transpile to.
@@ -116,7 +116,7 @@ render(<App />, document.body);
 Add an App component, and a little Hello component it renders to demonstrate the two types of Preact components - classes and functions (respectively).
 
 Create src/components/app.js
-```
+```js
 import { h, Component } from 'preact';
 import Hello from './hello';
 
@@ -133,7 +133,7 @@ export default class App extends Component {
 ```
 
 Create src/components/hello.js
-```
+```js
 import { h } from 'preact';
 
 export default () => (
@@ -154,7 +154,7 @@ says "when components/app changes, run the init function and the init function r
 sorry, anything within components/app **
 
 modify src/index.js
-```
+```js
 // This is the entry file, which kicks off all rendering.
 //
 // We import h() here because that's the function our JSX elements transpile to.
