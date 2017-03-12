@@ -22,9 +22,11 @@ module.exports = {
 					],
 					plugins: [
             new CopyWebpackPlugin([
-              {from: 'src/index.html'},
-              {to: 'build/index.html'},
-              {toType: 'file'}
+              {
+                from: 'src/index.html',
+                to: 'build/index.html',
+                toType: 'file'
+              }
             ]),
 						['transform-react-jsx', { pragma: 'h' }]
 					]
