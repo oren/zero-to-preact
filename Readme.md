@@ -186,3 +186,7 @@ npm run start
 npm run build
 ```
 
+## Notes:
+
+with webpack-dev-server, everything runs from memory
+
