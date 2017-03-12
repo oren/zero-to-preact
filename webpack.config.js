@@ -11,6 +11,15 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: 'src/index.html',
+        to: 'index.html'
+      }
+    ])
+  ],
+
 	module: {
 		rules: [
 			{
@@ -21,13 +30,6 @@ module.exports = {
 						'es2015'
 					],
 					plugins: [
-            new CopyWebpackPlugin([
-              {
-                from: 'src/index.html',
-                to: 'build/index.html',
-                toType: 'file'
-              }
-            ]),
 						['transform-react-jsx', { pragma: 'h' }]
 					]
 				}
