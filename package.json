@@ -1,0 +1,37 @@
+{
+  "name": "zero-to-preact",
+  "version": "1.0.0",
+  "description": "create .gitignore ``` /node_modules /build .DS_Store ```",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-transform-react-jsx": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-transform-react-jsx": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --progress --hot --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oren/zero-to-preact.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oren/zero-to-preact/issues"
+  },
+  "homepage": "https://github.com/oren/zero-to-preact#readme"
+}
