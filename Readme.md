@@ -143,6 +143,7 @@ All we have to do is move our import of `App` and the `render()` call into a fun
 
 If (module.hot) module.hot.accept('./components/app', init);
 says "when components/app changes, run the init function and the init function re renders our app. it's just a cherry on top
+sorry, anything within components/app **
 
 modify src/index.js
 ```
