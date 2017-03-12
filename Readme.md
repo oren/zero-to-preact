@@ -18,3 +18,7 @@ add to package.json (inside scripts)
 "start": "webpack-dev-server --progress --hot --inline"
 ```
 
+npm run start
+npm run build
+
+
