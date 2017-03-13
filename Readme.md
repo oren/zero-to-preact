@@ -1,13 +1,8 @@
 # zero-to-preact
 
-1. Install dependencies
-1. Declare config
-1. Write app code
-
 <details>
 <summary>
-  <b>1. Install dependencies</b>
-  <p></p>
+  1. Install dependencies
 </summary>
 Create .gitignore
 ```
@@ -15,7 +10,6 @@ Create .gitignore
 /build
 .DS_Store
 ```
-
 
 Run (it installs Webpack development dependencies)
 ```
@@ -33,8 +27,7 @@ Add to package.json (inside scripts)
 
 <details>
 <summary>
-  <b>2. Declare config</b>
-  <p></p>
+2. Declare config
 </summary>
 Create webpack.config.js
 ```js
@@ -87,8 +80,7 @@ module.exports = {
 
 <details>
 <summary>
-  <b>3. Write app code</b>
-  <p></p>
+3. Write app code  
 </summary>
 Create src folder
 
@@ -159,8 +151,8 @@ export default () => (
 
 <details>
 <summary>
-  <b>4. Extra step (nice to have)</b>
-  <p>Let's go crazy and add Hot Module Replacement!</p>
+4. Extra step (nice to have)
+Let's go crazy and add Hot Module Replacement!
 </summary>
 
 All we have to do is move our import of `App` and the `render()` call into a function, so that we can re-import changes as they get sent to the browser and re-render the new tree of components. We'll call that function so that we get an initial render like we had before, but then also pass it to Webpack to be called when we get updated components.
