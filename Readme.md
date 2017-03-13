@@ -4,8 +4,11 @@
 1. Declare config
 1. Write app code
 
-## 1. Install dependencies
-
+<details>
+<summary>
+  <b>1. Install dependencies</b>
+  <p></p>
+</summary>
 Create .gitignore
 ```
 /node_modules
@@ -25,9 +28,14 @@ Add to package.json (inside scripts)
 "build": "webpack",
 "start": "webpack-dev-server --progress --hot --inline"
 ```
+</details>
 
-## 2. Declare config
 
+<details>
+<summary>
+  <b>2. Declare config</b>
+  <p></p>
+</summary>
 Create webpack.config.js
 ```js
 var path = require('path');
@@ -74,9 +82,14 @@ module.exports = {
 	}
 };
 ```
+</details>
 
-## 3. Write app code
 
+<details>
+<summary>
+  <b>3. Write app code</b>
+  <p></p>
+</summary>
 Create src folder
 
 Add a static `index.html` that the browser will hit when we request `http://localhost:8081`. It just contains a `<script>` tag pointing to the `bundle.js` file Webpack outputs.
@@ -141,33 +154,16 @@ export default () => (
 	</p>
 );
 ```
-
-<details>
-<summary>
-  <b>Extra step (nice to have)>z</b>
-  <p>To find data in your collection, you can use chained mango-queries, which you maybe know from **mongoDB** or **mongoose**.
-</p>
-</summary>
-
-```javascript
-myCollection
-  .find()
-  .where('name').ne('Alice')
-  .where('age').gt(18).lt(67)
-  .limit(10)
-  .sort('-age')
-  .exec().then( docs => {
-    console.dir(docs);
-  });
-```
 </details>
 
 
-## Extra step (nice to have)
+<details>
+<summary>
+  <b>4. Extra step (nice to have)</b>
+  <p>Let's go crazy and add Hot Module Replacement!</p>
+</summary>
 
-Let's go crazy and add Hot Module Replacement!
 All we have to do is move our import of `App` and the `render()` call into a function, so that we can re-import changes as they get sent to the browser and re-render the new tree of components. We'll call that function so that we get an initial render like we had before, but then also pass it to Webpack to be called when we get updated components.
-
 
 If (module.hot) module.hot.accept('./components/app', init);
 says "when components/app changes, run the init function and the init function re renders our app. it's just a cherry on top
@@ -207,6 +203,7 @@ init();
 // If this is webpack-dev-server, set up HMR :)
 if (module.hot) module.hot.accept('./components/app', init);
 ```
+</details>
 
 ## Run in development
 ```
@@ -223,25 +220,3 @@ npm run build
 * With webpack-dev-server, everything runs from memory
 * What does Bable do? it converts es2015 syntax to es5 so my browser will be able to render the javascript. Things like import, let, require, arrow function, and converts jsx to regular js.
 * What does Webpack do? it creates a single js file from all the js files, it let me use the dev server and it enables the hot module reloading feature.
-
-## Feature-Showroom (click to toggle)
-
-<details>
-<summary>
-  <b>Mango-Query</b>
-  <p>To find data in your collection, you can use chained mango-queries, which you maybe know from **mongoDB** or **mongoose**.
-</p>
-</summary>
-
-```javascript
-myCollection
-  .find()
-  .where('name').ne('Alice')
-  .where('age').gt(18).lt(67)
-  .limit(10)
-  .sort('-age')
-  .exec().then( docs => {
-    console.dir(docs);
-  });
-```
-</details>
