@@ -142,6 +142,27 @@ export default () => (
 );
 ```
 
+<details>
+<summary>
+  <b>Extra step (nice to have)>z</b>
+  <p>To find data in your collection, you can use chained mango-queries, which you maybe know from **mongoDB** or **mongoose**.
+</p>
+</summary>
+
+```javascript
+myCollection
+  .find()
+  .where('name').ne('Alice')
+  .where('age').gt(18).lt(67)
+  .limit(10)
+  .sort('-age')
+  .exec().then( docs => {
+    console.dir(docs);
+  });
+```
+</details>
+
+
 ## Extra step (nice to have)
 
 Let's go crazy and add Hot Module Replacement!
@@ -202,3 +223,25 @@ npm run build
 * With webpack-dev-server, everything runs from memory
 * What does Bable do? it converts es2015 syntax to es5 so my browser will be able to render the javascript. Things like import, let, require, arrow function, and converts jsx to regular js.
 * What does Webpack do? it creates a single js file from all the js files, it let me use the dev server and it enables the hot module reloading feature.
+
+## Feature-Showroom (click to toggle)
+
+<details>
+<summary>
+  <b>Mango-Query</b>
+  <p>To find data in your collection, you can use chained mango-queries, which you maybe know from **mongoDB** or **mongoose**.
+</p>
+</summary>
+
+```javascript
+myCollection
+  .find()
+  .where('name').ne('Alice')
+  .where('age').gt(18).lt(67)
+  .limit(10)
+  .sort('-age')
+  .exec().then( docs => {
+    console.dir(docs);
+  });
+```
+</details>
