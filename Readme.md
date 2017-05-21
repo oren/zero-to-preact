@@ -210,5 +210,5 @@ npm run build
 ## Notes:
 
 * With webpack-dev-server, everything runs from memory
-* What does Bable do? it converts es2015 syntax to es5 so my browser will be able to render the javascript. Things like import, let, require, arrow function, and converts jsx to regular js.
+* What does Babel do? it converts es2015 syntax to es5 so my browser will be able to render the javascript. Things like import, let, require, arrow function, and converts jsx to regular js.
 * What does Webpack do? it creates a single js file from all the js files, it let me use the dev server and it enables the hot module reloading feature.
